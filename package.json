@@ -31,7 +31,11 @@
     "smoke:openclaw-docker-ui": "./scripts/smoke/openclaw-docker-ui.sh",
     "smoke:openclaw-sse-standalone": "./scripts/smoke/openclaw-sse-standalone.sh",
     "test:e2e": "npx playwright test --config tests/e2e/playwright.config.ts",
-    "test:e2e:headed": "npx playwright test --config tests/e2e/playwright.config.ts --headed"
+    "test:e2e:headed": "npx playwright test --config tests/e2e/playwright.config.ts --headed",
+    "check:text": "node scripts/check-text-integrity.mjs",
+    "lint:text": "npm run check:text",
+    "apply:text": "node scripts/apply-text-governance.mjs",
+    "apply:text:dry-run": "node scripts/apply-text-governance.mjs --dry-run"
   },
   "devDependencies": {
     "@changesets/cli": "^2.30.0",
